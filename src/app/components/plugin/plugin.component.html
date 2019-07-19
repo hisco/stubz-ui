@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <div class="plugin-name">{{plugin.name}}</div>
+      <mat-slide-toggle #pluginStatus [checked]="plugin.status"></mat-slide-toggle>
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let variation of plugin.variations">
+        <div class="variation" mat-line>
+          <div class="variation-status" [ngClass]="{'true' : variation.defaultStatus}"></div>
+          <div> {{variation.name}} </div>
+          <ng-container *ngIf="variation.variationData">
+            <div>{{variation.variationData | json}}</div>
+          </ng-container>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+

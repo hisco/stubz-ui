@@ -1,0 +1,28 @@
+:host {
+
+  .mat-card-title {
+    display: flex;
+
+    .plugin-name {
+      padding-right: 12px;
+    }
+  }
+
+  .variation {
+    display: flex;
+    align-items: center;
+
+    &-status {
+      height: 15px;
+      width: 15px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+
+      &.true {
+        background-color: #0cbb19;
+      }
+    }    
+  }
+}

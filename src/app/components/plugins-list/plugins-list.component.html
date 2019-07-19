@@ -1,0 +1,5 @@
+<div *ngIf="plugins && plugins.length">
+  <ng-container *ngFor="let plugin of plugins">
+    <plugin [plugin]="plugin" (onPluginStatusChange)="onPluginStatusChange($event)"></plugin>
+  </ng-container>
+</div>
